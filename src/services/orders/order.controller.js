@@ -66,7 +66,7 @@ router.post("/addorder", orderbodyvalidator, async (req, res) => {
             if (error.message == "404") {
               let response = new ResponseObject(
                 404,
-                "not found",
+                "prod not found",
                 "error",
                 null
               );
