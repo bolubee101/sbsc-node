@@ -10,6 +10,7 @@ const products = config.products;
 
 // create product route
 router.post("/addorder", orderbodyvalidator, async (req, res) => {
+  console.log(`${products}/${req.body.product_id}`)
   await fetch(`${products}/${req.body.product_id}`)
     .then((resp) => {
       if (resp.status == 404) {
@@ -19,7 +20,6 @@ router.post("/addorder", orderbodyvalidator, async (req, res) => {
       }
     })
     .then(async (json) => {
-    
       console.log(json);
       if (req.body.quantity > json._id) {
         let response = new ResponseObject(
@@ -52,7 +52,7 @@ router.post("/addorder", orderbodyvalidator, async (req, res) => {
                 {
                   order_id: neworder._id,
                   product_id: req.body.product_id,
-                  product_name:json.data.name,
+                  product_name: json.data.name,
                   quantity: req.body.quantity,
                   description: json.data.description,
                 }
@@ -61,10 +61,16 @@ router.post("/addorder", orderbodyvalidator, async (req, res) => {
               delete response.statusCode;
               res.json(response);
             });
-          }) .catch((error) => {
-            console.log("1"+error.message);
+          })
+          .catch((error) => {
+            console.log(error.message);
             if (error.message == "404") {
-              let response = new ResponseObject(404, "not found", "error", null);
+              let response = new ResponseObject(
+                404,
+                "not found",
+                "error",
+                null
+              );
               res.status(response.statusCode);
               delete response.statusCode;
               return res.json(response);
