@@ -4,7 +4,7 @@
   "description": "product services",
   "main": "products.js",
   "scripts": {
-    "start": "node src/services/products/product.js"
+    "start": "node src/services/orders/order.js"
   },
   "repository": {
     "type": "git",
