@@ -4,7 +4,7 @@
   "description": "product services",
   "main": "products.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/services/products/product.js"
   },
   "repository": {
     "type": "git",
