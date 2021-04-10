@@ -15,6 +15,9 @@ const app=express();
 app.use(express.json());
 app.use("/api/products",products)
 
+app.get("/",(req,res)=>{
+  console.log("product servides")
+})
 app.listen(port,()=>{
     console.log("server dey run");
 })
