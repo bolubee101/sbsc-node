@@ -62,7 +62,7 @@ router.post("/addorder", orderbodyvalidator, async (req, res) => {
               res.json(response);
             });
           }) .catch((error) => {
-            console.log(error.message);
+            console.log("1"+error.message);
             if (error.message == "404") {
               let response = new ResponseObject(404, "not found", "error", null);
               res.status(response.statusCode);

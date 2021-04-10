@@ -13,7 +13,7 @@ mongoose
 const port=process.env.PORT||5555
 const app=express();
 app.use(express.json());
-app.use("/api/orders",order)
+app.use("/api/orders",order);
 
 app.listen(port,()=>{
     console.log("server dey run");
