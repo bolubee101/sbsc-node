@@ -18,6 +18,7 @@
   "homepage": "https://github.com/bolubee101/sbsc-node#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.12.3"
+    "mongoose": "^5.12.3",
+    "node-fetch": "^2.6.1"
   }
 }
