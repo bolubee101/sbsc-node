@@ -16,7 +16,7 @@ module.exports.productbodyvalidator = (req, res, next) => {
     let response = new ResponseObject(
       400,
       `missing fields: ${missing.join(", ")}`,
-      error,
+      "error",
       null
     );
     res.status(response.statusCode);
