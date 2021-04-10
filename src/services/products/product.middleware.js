@@ -10,13 +10,13 @@ module.exports.productbodyvalidator = (req, res, next) => {
     missing.push("quantity");
   }
   if (!productDTO.description) {
-    missing.push(description);
+    missing.push("description");
   }
   if (missing.length !== 0) {
     let response = new ResponseObject(
       400,
       `missing fields: ${missing.join(", ")}`,
-      error,
+      "error",
       null
     );
     res.status(response.statusCode);
