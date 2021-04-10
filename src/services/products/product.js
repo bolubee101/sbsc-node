@@ -10,7 +10,7 @@ mongoose
   .catch((err) => {
     throw err;
   });
-const port=4444||process.env.PORT
+const port=process.env.PORT||4444
 const app=express();
 app.use(express.json());
 app.use("/api/products",products)
