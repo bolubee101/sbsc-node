@@ -1,1 +1,1 @@
-web: node src/services/products/products.js
+web: node src/services/products/product.js
