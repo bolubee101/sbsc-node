@@ -1,1 +1,1 @@
-web: node src/services/products/product.js
+web: node src/services/orders/order.js
