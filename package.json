@@ -1,0 +1,23 @@
+{
+  "name": "sbsc-node-products",
+  "version": "1.0.0",
+  "description": "product services",
+  "main": "products.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolubee101/sbsc-node.git"
+  },
+  "author": "Lord Bee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bolubee101/sbsc-node/issues"
+  },
+  "homepage": "https://github.com/bolubee101/sbsc-node#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3"
+  }
+}
