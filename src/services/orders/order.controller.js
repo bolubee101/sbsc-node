@@ -31,7 +31,7 @@ router.post("/addorder", orderbodyvalidator, async (req, res) => {
         delete response.statusCode;
         res.json(response);
       } else {
-        fetch(`${products}/${req.body.product_id}/${req.body.quantity}`)
+        fetch(`${products}/api/products${req.body.product_id}/${req.body.quantity}`)
           .then((resp) => {
             if (resp.status == 404) {
               throw new Error("404");
