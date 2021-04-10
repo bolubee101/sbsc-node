@@ -10,8 +10,7 @@ const products = config.products;
 
 // create product route
 router.post("/addorder", orderbodyvalidator, async (req, res) => {
-  console.log(`${products}/${req.body.product_id}`)
-  await fetch(`${products}/${req.body.product_id}`)
+    await fetch(`${products}/api/products/${req.body.product_id}`)
     .then((resp) => {
       if (resp.status == 404) {
         throw new Error("404");
